@@ -152,7 +152,7 @@ class SeriesForm(CVForm):
       table.AllowUserToResizeColumns = False
       table.DefaultCellStyle.NullValue = "--"
 
-      table.Location = Point(10, 60)
+      table.Location = Point(218, 60)
       table.Size = Size(500, 290) \
          if self.__config.show_covers_b else Size(710, 290)
 
@@ -234,7 +234,7 @@ class SeriesForm(CVForm):
       
       button = Button()
       button.DialogResult = DialogResult.OK
-      button.Location = Point(15, 362)
+      button.Location = Point(223, 362)
       button.Size = Size(90, 24)
       button.Text = i18n.get("SeriesFormOK")
       return button
@@ -246,7 +246,7 @@ class SeriesForm(CVForm):
       
       button = Button()
       button.DialogResult = DialogResult.Ignore
-      button.Location = Point(110, 362)
+      button.Location = Point(318, 362)
       button.Size = Size(90, 24)
       button.Text = i18n.get("SeriesFormSkip")
       return button
@@ -258,7 +258,7 @@ class SeriesForm(CVForm):
       
       button = Button()
       button.DialogResult = DialogResult.Retry
-      button.Location = Point(275, 362) \
+      button.Location = Point(478, 362) \
          if self.__config.show_covers_b else Point(485, 362) 
       button.Size = Size(115, 24)
       button.Text = i18n.get("SeriesFormAgain")
@@ -270,7 +270,7 @@ class SeriesForm(CVForm):
       
       button = Button()
       button.DialogResult = DialogResult.Yes
-      button.Location = Point(395, 362) \
+      button.Location = Point(598, 362) \
          if self.__config.show_covers_b else Point(605, 362) 
       button.Size = Size(115, 24)
       button.Text = i18n.get("SeriesFormIssues")
@@ -287,7 +287,7 @@ class SeriesForm(CVForm):
       
       label = Label()
       label.UseMnemonic = False
-      label.Location = Point(10, 20)
+      label.Location = Point(218, 20)
       label.Size = Size(480, 40)
       if num_matches_n > 1:
          label.Text = i18n.get("SeriesFormChooseText")\
@@ -305,7 +305,7 @@ class SeriesForm(CVForm):
       '''
       panel = IssueCoverPanel(self.__config, -9991 \
          if self.__config.force_series_art_b else book.issue_num_s) 
-      panel.Location = Point(523, 30)
+      panel.Location = Point(10, 10)
       # panel size is determined by the panel itself
       
       if self.__config.show_covers_b:
